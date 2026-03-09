@@ -61,7 +61,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="section-label">// about me</span>
+          <span className="section-label">{"// about me"}</span>
           <h2 className="section-title mt-2">
             Terminal<span className="text-cyan">.</span>profile
           </h2>

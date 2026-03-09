@@ -62,7 +62,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <span className="section-label">// services</span>
+          <span className="section-label">{"// services"}</span>
           <h2 className="section-title mt-2">
             What I Do<span className="text-cyan">.</span>
           </h2>

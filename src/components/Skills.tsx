@@ -42,7 +42,7 @@ export default function Skills() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-label">// tech stack</span>
+          <span className="section-label">{"// tech stack"}</span>
           <h2 className="section-title mt-2">
             Skills & Tools<span className="text-cyan">.</span>
           </h2>

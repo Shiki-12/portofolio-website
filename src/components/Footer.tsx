@@ -100,7 +100,7 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <span className="section-label">// contact</span>
+          <span className="section-label">{"// contact"}</span>
           <h2 className="section-title mt-2">
             Get In Touch<span className="text-cyan">.</span>
           </h2>

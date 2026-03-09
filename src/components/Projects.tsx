@@ -52,7 +52,7 @@ export default function Projects({ projects }: ProjectsProps) {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <span className="section-label">// portfolio</span>
+          <span className="section-label">{"// portfolio"}</span>
           <h2 className="section-title mt-2">
             Featured Projects<span className="text-cyan">.</span>
           </h2>

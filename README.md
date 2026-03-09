@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Futuristic Sci-Fi Portfolio
 
-## Getting Started
+A complete, highly professional, and responsive personal portfolio website built with modern web technologies. The design features a cyberpunk, high-tech laboratory aesthetic with glassmorphism, neon glows, and dynamic animations.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Cyberpunk Aesthetic**: True black backgrounds (`#050505`) with Electric Cyan (`#00FFFF`) and Neon Purple (`#B026FF`) accents and glows.
+- **Dynamic Projects**: The "Projects" section automatically fetches and displays the 6 most recently updated public repositories from the GitHub API using Next.js Incremental Static Regeneration (ISR).
+- **Interactive Animations**: Smooth scroll reveals, hover scaling, and staggered enter animations powered by Framer Motion.
+- **Terminal UI**: An "About Me" section creatively styled as a macOS/Linux terminal with line-by-line command prompt execution animations.
+- **Glassmorphism**: Floating navbar and project/service cards feature frosted glass effects (`backdrop-blur`).
+- **Contact Form**: Integrated working contact form using Web3Forms.
+- **Responsive**: Fully optimized for mobile, tablet, and desktop viewports.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Server Components)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (UI text) & [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Headings & code)
+
+## 📦 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Shiki-12/portofolio-website.git
+   cd portofolio-website
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+   *or*
+   ```bash
+   yarn install
+   ```
+
+3. **Configure Contact Form (Optional):**
+   The footer contact form uses Web3Forms. If you want to use your own email, update the `access_key` in `src/components/Footer.tsx` inside the `handleSubmit` function.
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   *or*
+   ```bash
+   yarn dev
+   ```
+
+5. **Open the application:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 📁 Project Structure
+
+```text
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Tailwind config & custom cyberpunk design variables
+│   │   ├── layout.tsx       # Root layout, font definitions (Space Grotesk/JetBrains)
+│   │   └── page.tsx         # Main async Server Component fetching GitHub data
+│   │
+│   └── components/
+│       ├── About.tsx        # Terminal-style bio section
+│       ├── Footer.tsx       # Contact form and social links
+│       ├── Hero.tsx         # Typewriter animation & main CTA
+│       ├── Navbar.tsx       # Floating glassmorphic header
+│       ├── Projects.tsx     # Grid of GitHub repositories
+│       ├── Services.tsx     # What I Do section
+│       └── Skills.tsx       # Infinite scrolling tech stack marquee
+│
+├── public/                  # Static assets (images, resumes, etc.)
+├── package.json
+└── tailwind.config.ts / postcss.config.mjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 API Integrations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### GitHub API
+The project dynamically fetches repository data using the GitHub REST API:
+```typescript
+fetch("https://api.github.com/users/shiki-12/repos?sort=updated&per_page=6", {
+  next: { revalidate: 3600 } // Caches the response for 1 hour (ISR)
+})
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Theme & Colors
+- **Background:** `#050505`
+- **Ambient Overlays:** Radial gradients and transparent grid patterns.
+- **Primary Glow / Accent:** `#00FFFF` (Cyan)
+- **Secondary Glow / Accent:** `#B026FF` (Purple)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Developed by Shiki. All systems operational.*
