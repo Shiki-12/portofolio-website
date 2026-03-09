@@ -82,16 +82,6 @@ A complete, highly professional, and responsive personal portfolio website built
 └── tailwind.config.ts / postcss.config.mjs
 ```
 
-## 🌐 API Integrations
-
-### GitHub API
-The project dynamically fetches repository data using the GitHub REST API:
-```typescript
-fetch("https://api.github.com/users/shiki-12/repos?sort=updated&per_page=6", {
-  next: { revalidate: 3600 } // Caches the response for 1 hour (ISR)
-})
-```
-
 ## 🎨 Theme & Colors
 - **Background:** `#050505`
 - **Ambient Overlays:** Radial gradients and transparent grid patterns.
