@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X,  Github } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -37,11 +38,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan to-purple flex items-center justify-center">
-              <span className="font-mono text-sm font-bold text-background">
-                S
-              </span>
-            </div>
+            <Image
+              src="/image/pfp.png"
+              alt="Profile Picture"
+              width={32}
+              height={32}
+              className="w-8 h-8 rounded-lg object-cover ring-1 ring-white/10 group-hover:ring-cyan/50 transition-all duration-300"
+            />
             <span className="font-mono text-lg font-semibold text-foreground group-hover:text-cyan transition-colors">
               shiki<span className="text-cyan">.</span>dev
             </span>
@@ -64,13 +67,13 @@ export default function Navbar() {
           {/* Resume Button */}
           <div className="hidden md:block">
             <a
-              href="/resume.pdf"
+              href="https://github.com/Shiki-12"
               target="_blank"
               rel="noopener noreferrer"
               className="neon-btn px-5 py-2.5 rounded-lg font-mono text-sm text-cyan flex items-center gap-2 hover:scale-105 transition-transform"
             >
-              <Download size={14} />
-              Resume
+              <Github size={14} />
+              my github
             </a>
           </div>
 
@@ -111,13 +114,13 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <a
-                href="/resume.pdf"
+                href="https://github.com/Shiki-12"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="neon-btn mt-3 px-5 py-2.5 rounded-lg font-mono text-sm text-cyan flex items-center justify-center gap-2 w-full"
               >
-                <Download size={14} />
-                Download Resume
+                <Github size={14} />
+                my github
               </a>
             </div>
           </motion.div>

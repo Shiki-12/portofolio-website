@@ -3,44 +3,18 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-interface Project {
+export interface Project {
   title: string;
   description: string;
   tags: string[];
-  liveUrl: string;
+  liveUrl: string | null;
   githubUrl: string;
   accent: "cyan" | "purple" | "mixed";
 }
 
-const projects: Project[] = [
-  {
-    title: "API Dashboard",
-    description:
-      "A Next.js web application that fetches and aggregates data from multiple third-party APIs, presenting real-time analytics through an interactive dashboard with dynamic charts and filtering.",
-    tags: ["Next.js", "TypeScript", "REST API", "Tailwind CSS", "Chart.js"],
-    liveUrl: "#",
-    githubUrl: "#",
-    accent: "cyan",
-  },
-  {
-    title: "Sentinel Bot",
-    description:
-      "A Python-based Telegram bot for server monitoring and automation. Sends real-time alerts on system metrics, manages user commands, and integrates with CI/CD pipelines for deployment notifications.",
-    tags: ["Python", "Telegram API", "SQLite", "Docker", "Linux"],
-    liveUrl: "#",
-    githubUrl: "#",
-    accent: "purple",
-  },
-  {
-    title: "NetForge Lab",
-    description:
-      "A comprehensive server and network configuration project. Includes router/switch setup, firewall rules, VPN tunnels, VLAN segmentation, and monitoring dashboards for enterprise infrastructure.",
-    tags: ["Networking", "Linux", "pfSense", "Grafana", "Ansible"],
-    liveUrl: "#",
-    githubUrl: "#",
-    accent: "mixed",
-  },
-];
+interface ProjectsProps {
+  projects: Project[];
+}
 
 const accentColors = {
   cyan: {
@@ -63,7 +37,7 @@ const accentColors = {
   },
 };
 
-export default function Projects() {
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects" className="relative py-24 sm:py-32">
       {/* Ambient glow */}
@@ -94,7 +68,7 @@ export default function Projects() {
             const colors = accentColors[project.accent];
             return (
               <motion.article
-                key={project.title}
+                key={project.githubUrl}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -117,15 +91,17 @@ export default function Projects() {
                     >
                       <Github size={16} />
                     </a>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`${colors.icon} opacity-60 hover:opacity-100 transition-opacity`}
-                      aria-label="Live Demo"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${colors.icon} opacity-60 hover:opacity-100 transition-opacity`}
+                        aria-label="Live Demo"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
