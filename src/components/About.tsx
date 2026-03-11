@@ -46,7 +46,7 @@ const bioLines = [
   },
   { prompt: false, text: "  Cybersecurity, Hardware Repair, Docker, Git ]" },
   { prompt: false, text: "" },
-  { prompt: true, text: "█" },
+  { prompt: true, text: "special thanks to allah" },
 ];
 
 export default function About() {
