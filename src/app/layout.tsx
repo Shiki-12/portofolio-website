@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "cybersecurity",
     "next.js",
   ],
+  icons: {
+    icon: '/portofolio/favicon.ico',
+  },
 };
 
 export default function RootLayout({
