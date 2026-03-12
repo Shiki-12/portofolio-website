@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X,  Github } from "lucide-react";
+import { Menu, X,  Github, HomeIcon } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -67,13 +67,13 @@ export default function Navbar() {
           {/* Resume Button */}
           <div className="hidden md:block">
             <a
-              href="https://github.com/Shiki-12"
+              href="https://gshiki.my.id"
               target="_blank"
               rel="noopener noreferrer"
               className="neon-btn px-5 py-2.5 rounded-lg font-mono text-sm text-cyan flex items-center gap-2 hover:scale-105 transition-transform"
             >
-              <Github size={14} />
-              my github
+              <HomeIcon size={14} />
+              Home
             </a>
           </div>
 
