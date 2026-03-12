@@ -15,25 +15,25 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  // 1. TAMBAHIN INI BIAR NEXT.JS TAU DOMAIN ASLI LU
-  metadataBase: new URL('https://gshiki.my.id'), 
-  
-  title: "Shiki — Link in Bio",
-  description: "Developer & Creator · Building the future, one line of code at a time.",
+  // 1. KASIH TAU DOMAIN ASLINYA
+  metadataBase: new URL('https://gshiki.my.id'),
+
+  title: "Shiki — Developer & System Administrator",
+  description: "Personal portfolio of Shiki — Frontend Developer, System Administrator, and Cybersecurity Enthusiast.",
   icons: {
-    icon: '/favicon.ico', 
+    icon: '/portofolio/favicon.ico', 
   },
   openGraph: {
-    title: "Shiki — Link in Bio",
-    description: "Developer & Creator · Building the future, one line of code at a time.",
-    url: "https://gshiki.my.id",
-    siteName: "Shiki Main Lobby",
+    title: "Shiki — Developer & System Administrator",
+    description: "Personal portfolio of Shiki — Frontend Developer, System Administrator, and Cybersecurity Enthusiast.",
+    url: "https://gshiki.my.id/portofolio",
+    siteName: "Shiki Portfolio",
     images: [
       {
-        url: "https://gshiki.my.id/og-main.png", 
+        url: "https://gshiki.my.id/portofolio/og-portofolio.png", 
         width: 1200,
         height: 630,
-        alt: "Shiki - Main Lobby",
+        alt: "Shiki - Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shiki — Link in Bio",
-    description: "Developer & Creator · Building the future, one line of code at a time.",
-    images: ["https://gshiki.my.id/og-main.png"], 
+    title: "Shiki — Developer & System Administrator",
+    description: "Personal portfolio of Shiki — Frontend Developer, System Administrator, and Cybersecurity Enthusiast.",
+    images: ["https://gshiki.my.id/portofolio/og-portofolio.png"], 
   },
 };
 
