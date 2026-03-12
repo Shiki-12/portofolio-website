@@ -15,19 +15,35 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shiki — Developer & System Administrator",
-  description:
-    "Personal portfolio of Shiki — Frontend Developer, System Administrator, and Cybersecurity Enthusiast. Building modern web applications and managing network infrastructure.",
-  keywords: [
-    "developer",
-    "portfolio",
-    "frontend",
-    "system administrator",
-    "cybersecurity",
-    "next.js",
-  ],
+  // 1. TAMBAHIN INI BIAR NEXT.JS TAU DOMAIN ASLI LU
+  metadataBase: new URL('https://gshiki.my.id'), 
+  
+  title: "Shiki — Link in Bio",
+  description: "Developer & Creator · Building the future, one line of code at a time.",
   icons: {
-    icon: '/portofolio/favicon.ico',
+    icon: '/favicon.ico', 
+  },
+  openGraph: {
+    title: "Shiki — Link in Bio",
+    description: "Developer & Creator · Building the future, one line of code at a time.",
+    url: "https://gshiki.my.id",
+    siteName: "Shiki Main Lobby",
+    images: [
+      {
+        url: "https://gshiki.my.id/og-main.png", 
+        width: 1200,
+        height: 630,
+        alt: "Shiki - Main Lobby",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shiki — Link in Bio",
+    description: "Developer & Creator · Building the future, one line of code at a time.",
+    images: ["https://gshiki.my.id/og-main.png"], 
   },
 };
 
