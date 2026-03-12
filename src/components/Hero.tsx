@@ -7,7 +7,7 @@ import { ArrowRight, MessageSquare } from "lucide-react";
 const roles = [
   "Frontend Developer",
   "System Administrator",
-  "Cybersecurity",
+  "CyberSecurity",
 ];
 
 export default function Hero() {
